@@ -41,7 +41,7 @@ function Professor() {
       <div class="card-body">
         <h5 class="card-title">ER. Akshay Singh</h5>
         <p class="card-text">I teach you how to build Websites using Java Full Stack across the front-end and back-end Including Database.</p>
-        <p class="card-text"><small class="text-body-secondary">JAVA FULL SHOP</small></p>
+        <p class="card-text"><small class="text-body-secondary">JAVA FULL STACK</small></p>
       </div>
     </div>
   </div>
