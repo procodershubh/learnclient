@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { backendurl } from '../Service';
+import {   ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Joinnow() {
 
@@ -39,18 +41,29 @@ function Joinnow() {
         console.log(res);
         if(res.status===255)
         {
-            alert("data submited succesfully")
-            appnavigate("/")
+            toast.success("thank you for contacting us");
+
+           
+            setTimeout(() => {
+                appnavigate("/")
+              }, 3000);
 
         }
         else if(res.status===409)
         {
-            alert("email allready used")
+            toast.warning("email allready used");
+
         }
         else if(res.status===450)
             {
-                alert("name must be 3 digit")
+                toast.warning("Name must be 3 digits long");
+
             }
+            else if(res.status===500)
+                {
+                    toast.error( "invalid Email ");
+    
+                }
         
 
         
@@ -64,6 +77,8 @@ function Joinnow() {
 
         <form>
             <div className='container'>
+           
+                         <ToastContainer/>
             
                 <div className='row justify-content-md-center'>
                     <div className='col-sm-8 p-3'>

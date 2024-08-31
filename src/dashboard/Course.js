@@ -17,7 +17,7 @@ function Course() {
 
 
   return (
-    <div className='container-fluid ' style={{marginTop:'60px', }}>
+    <div className='container-fluid ' >
         <div className='row'>
             <div className='col-md-12 text-center'>
            

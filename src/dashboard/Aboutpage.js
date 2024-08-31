@@ -16,7 +16,7 @@ function Aboutpage() {
 
 
   return (
-    <div className='container-fluid ' style={{marginTop:'60px'}}>
+    <div className='container-fluid ' >
         <div className='row'>
             <div className='col-md-12 text-center'>
             <h1>WELCOME TO <span className='carsoltext'>eLEARNING</span> PLATFORM </h1>

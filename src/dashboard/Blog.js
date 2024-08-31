@@ -2,7 +2,7 @@ import React from 'react'
 
 function Blog() {
   return (
-    <div className='container-fluid ' style={{marginTop:'60px',height:'90vh',maxHeight:'100%' }}>
+    <div className='container-fluid ' style={{height:'90vh',maxHeight:'100%' }}>
         <div className='row'>
             <div className='col-md-12 text-center'>
             <h1><span className='carsoltext'>Our Students Speak</span> </h1>
@@ -18,7 +18,10 @@ function Blog() {
         
 
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner" style={{backgroundColor:'beige',padding:'20px',borderRadius:'15px'}}>
     <div class="carousel-item active">
     <p style={{fontSize:'17px',color:'gray',wordSpacing:'4px',lineHeight:'25px'}}>I am elated to tell you all about my wonderful experience at APPSquadz. 
@@ -31,7 +34,6 @@ function Blog() {
             <br/>
            
             <h4 style={{textDecoration:'underline'}}>Neha Dhaila <span className='carsoltext'>  ( TCS )</span> </h4>
-
     </div>
     <div class="carousel-item">
     <p style={{fontSize:'17px',color:'gray',wordSpacing:'4px',lineHeight:'25px'}}>It is a wonderful experience for me to turn from a student to an IT professional. 
@@ -42,7 +44,6 @@ function Blog() {
              The learnings I got here will help me to grow my career.</p>
                 <br/>
                 <h4 style={{textDecoration:'underline'}}>Alok Kumar Chaudhary <span className='carsoltext'>  ( IDEMIA SYSCOM )</span> </h4>
-
     </div>
     <div class="carousel-item">
     <p style={{fontSize:'17px',color:'gray',wordSpacing:'4px',lineHeight:'25px'}}>
@@ -54,9 +55,16 @@ function Blog() {
            <br/>
            
            <h4 style={{textDecoration:'underline'}}>Ravi Prasad Panjiyar <span className='carsoltext'>  ( 50 Hertz Limited ) </span> </h4>
-
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
                 </div>

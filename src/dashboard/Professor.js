@@ -3,7 +3,7 @@ import React from 'react'
 function Professor() {
   return (
 
-    <div className='container-fluid ' style={{marginTop:'60px'}}>
+    <div className='container-fluid ' >
         <div className='row'>
             <div className='col-md-12 text-center'>
             <h1>MEET OUR <span className='carsoltext'>Expert Instructors</span> </h1>
