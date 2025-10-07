@@ -94,18 +94,28 @@ function Joinnow() {
             if (res.status === 255) {
                 toast.success("Thank you for contacting us");
                 setTimeout(() => {
+                    setIsLoading(false);
+
                     appnavigate("/");
-                }, 3000);
+                }, 2000);
             } else if (res.status === 409) {
                 toast.warning("Email already used");
+                      setIsLoading(false);
+
             } else if (res.status === 450) {
                 toast.warning("Name must be 3 digits long");
+                      setIsLoading(false);
+
             } else if (res.status === 500) {
                 toast.error("Invalid Email");
+                      setIsLoading(false);
+
             }
         } catch (error) {
             toast.error("Something went wrong");
             console.error(error);
+                  setIsLoading(false);
+
         } finally {
             setIsLoading(false); // ✅ End loading
         }
