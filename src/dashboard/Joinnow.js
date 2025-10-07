@@ -32,84 +32,85 @@ function Joinnow() {
 
   
 
-   
+    // const registerpage = async()=>{
+    //             setIsLoading(true); 
 
-    //  const registerpage = async () => {
-    //     setIsLoading(true); // ✅ Start loading
 
-    //     const { fullname, email, phone, dob, gender, course } = insdata;
+    //     const {fullname,email,phone,dob,gender,course} = insdata;
+    //     const mydata = await fetch(`${backendurl}/students`,{
+    //         method: "POST",
+    //         headers: {"content-type":"application/json"}, 
+    //         body: JSON.stringify({
+    //             fullname,email,phone,dob,gender,course
+    //         })
+    //     })
+    //     const res = await mydata.json();
+    //     console.log(res);
+    //     if(res.status===255)
+    //     {
+    //         toast.success("thank you for contacting us");
 
-    //     try {
-    //         const mydata = await fetch(`${backendurl}/students`, {
-    //             method: "POST",
-    //             headers: { "content-type": "application/json" },
-    //             body: JSON.stringify({ fullname, email, phone, dob, gender, course })
-    //         });
+           
+    //         setTimeout(() => {
+    //             appnavigate("/")
+    //           }, 3000);
 
-    //         const res = await mydata.json();
-    //         console.log(res);
-
-    //         if (res.status === 255) {
-    //             toast.success("Thank you for contacting us");
-    //             setTimeout(() => {
-    //                 appnavigate("/");
-    //             }, 3000);
-    //         } else if (res.status === 409) {
-    //             toast.warning("Email already used");
-    //         } else if (res.status === 450) {
-    //             toast.warning("Name must be 3 digits long");
-    //         } else if (res.status === 500) {
-    //             toast.error("Invalid Email");
-    //         }
-    //     } catch (error) {
-    //         toast.error("Something went wrong");
-    //         console.error(error);
-    //     } finally {
-    //         setIsLoading(false); // ✅ End loading
     //     }
-    // };
+    //     else if(res.status===409)
+    //     {
+    //         toast.warning("email allready used");
 
+    //     }
+    //     else if(res.status===450)
+    //         {
+    //             toast.warning("Name must be 3 digits long");
 
-    const registerpage = async () => {
-  setIsLoading(true);
-  const { fullname, email, phone, dob, gender, course } = insdata;
+    //         }
+    //         else if(res.status===500)
+    //             {
+    //                 toast.error( "invalid Email ");
+    
+    //             }
+        
 
-  try {
-    const mydata = await fetch(`${backendurl}/students`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ fullname, email, phone, dob, gender, course }),
-    });
+        
+    // }
 
-    const res = await mydata.json();
-    console.log(res);
+     const registerpage = async () => {
+        setIsLoading(true); // ✅ Start loading
 
-    if (res.status === 255) {
-      toast.success("Thank you for contacting us");
+        const { fullname, email, phone, dob, gender, course } = insdata;
 
-      // ✅ Use Promise-based delay (safer for mobile browsers)
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+        try {
+            const mydata = await fetch(`${backendurl}/students`, {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify({ fullname, email, phone, dob, gender, course })
+            });
 
-      appnavigate("/"); // Navigate after delay safely
-    } 
-    else if (res.status === 409) {
-      toast.warning("Email already used");
-    } 
-    else if (res.status === 450) {
-      toast.warning("Name must be 3 digits long");
-    } 
-    else if (res.status === 500) {
-      toast.error("Invalid Email");
-    }
-  } 
-  catch (error) {
-    toast.error("Something went wrong");
-    console.error(error);
-  } 
-  finally {
-    setIsLoading(false);
-  }
-};
+            const res = await mydata.json();
+            console.log(res);
+
+            if (res.status === 255) {
+                toast.success("Thank you for contacting us");
+                setTimeout(() => {
+                    appnavigate("/");
+                }, 3000);
+            } else if (res.status === 409) {
+                toast.warning("Email already used");
+            } else if (res.status === 450) {
+                toast.warning("Name must be 3 digits long");
+            } else if (res.status === 500) {
+                toast.error("Invalid Email");
+            }
+        } catch (error) {
+            toast.error("Something went wrong");
+            console.error(error);
+        } finally {
+            setIsLoading(false); // ✅ End loading
+        }
+    };
+
 
 
     return (
